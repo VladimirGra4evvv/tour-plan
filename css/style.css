@@ -415,6 +415,10 @@ template {
   line-height: 18px;
 }
 
+.navbar-menu__link:hover {
+  color: #ec1f46;
+}
+
 .navbar .logo {
   width: 177px;
 }
@@ -449,6 +453,11 @@ template {
   height: 100%;
   border: none;
   background-color: #ec1f46;
+  cursor: pointer;
+}
+
+.navbar .search__button:hover {
+  background-color: #0a223d;
 }
 
 .user {
@@ -587,6 +596,13 @@ template {
 .rating__counter {
   font-size: 14px;
   line-height: 18px;
+  font-weight: 700;
+}
+
+.rating__max-number {
+  font-size: 10px;
+  line-height: 11px;
+  font-weight: 700;
 }
 
 .swiper-container {
