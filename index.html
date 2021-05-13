@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Tour Plan - Hotel Booking</title>
     <link 
-        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;800&
         display=swap" 
         rel="stylesheet"
     >
@@ -191,8 +191,25 @@
                     </div>
                     <!-- /.booking -->
                     <div class="map">
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6e6b10c8ba3bcec9410a8d3080d4772010a32eaf37950f6836431025325ba945&amp;source=constructor" 
-                        width="100%" height="213" frameborder="0"></iframe>
+                        <script src="https://api-maps.yandex.ru/2.1/?apikey=9f34a388-de5f-4727-99e5-f61d247bfa72&load=Map&lang=ru_RU"
+                        type="text/javascript"></script>
+                        <script type="text/javascript">
+                            ymaps.ready(function () {  
+                              var map = new ymaps.Map("map", {
+                                center: [36.844542, 30.592318], 
+                                zoom: 40
+                              });
+                          
+                              if (map) {
+                                ymaps.modules.require(['Placemark', 'Circle'], 
+                                function (Placemark, Circle) {
+                                  var placemark = new Placemark([36.844542, 30.592318]);
+                                });
+                              }
+                            });
+                          </script>
+                        
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e6b10c8ba3bcec9410a8d3080d4772010a32eaf37950f6836431025325ba945&amp;width=347&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
                     </div>
                     <!-- /.map -->
                 </div>
