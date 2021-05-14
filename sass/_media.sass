@@ -10,17 +10,14 @@
                 height: 100%
                 object-fit: cover
 @media (min-width: 992px)
-    .search
+    .search,
+    .subscribe
         &__button
             &:hover
                 background-color: $dark
     .user
-        &__avatar
-            &:hover
-                color: $primary
-        &__name
-            &:hover
-                color: $primary
+        &:hover &__name
+            color: $primary
     .navbar
         &-menu
             &__link
@@ -31,8 +28,14 @@
             &__link
                 &:hover
                     color: $primary
+    .booking
+        &__button
+            &:hover
+                color: $dark
+
 @media (max-width: 992px)
-    .container
+    .container, 
+    .newsletter-wrapper
         max-width: 700px
     .logo
         width: 132px
@@ -118,7 +121,13 @@
     .booking
         width: 100%
     .map
-        width: 100%   
+        width: 100%
+    .newsletter  
+        &-wrapper
+            max-width: 576px
+            width: 92%
+            flex-direction: column
+            align-items: flex-start
 @media (max-width: 576px)
     .navbar
         .logo
@@ -128,4 +137,10 @@
     .hotel
         &__slider
             margin-bottom: 20px
+    .newsletter
+        padding: 76px 0 83px 0
+        &__title
+            margin-bottom: 37px
+    .subscrube
+        width: 100%
 
