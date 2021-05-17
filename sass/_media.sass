@@ -14,7 +14,8 @@
             
 @media (min-width: 992px)
     .search,
-    .subscribe
+    .subscribe,
+    .card
         &__button
             &:hover
                 background-color: $dark
@@ -140,7 +141,7 @@
     .newsletter  
         &-wrapper
             max-width: 576px
-            width: 92%
+            width: fit-content
             flex-direction: column
             align-items: flex-start
     .reviews
@@ -159,9 +160,13 @@
                     right: 50%
                     margin-right: -65px
                     transform: translate(50%, 0)
+        &__title
+            font-size: 30px
     .activities
         padding-top: 40px
         padding-bottom: 60px
+        &__title
+            font-size: 24px
     .card
         width: 49%
         height: 255px
@@ -182,4 +187,10 @@
         width: 100%
     .card
         width: 100%
-
+    .reviews
+        &__title
+            font-size: 18px
+            margin-bottom: 42px
+    .activities
+        &__title
+            font-size: 18px
