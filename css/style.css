@@ -419,7 +419,7 @@ template {
   line-height: 18px;
 }
 
-.navbar-menu__item--mobile_visible {
+.navbar-menu__item--mobile--visible {
   display: none;
 }
 
@@ -1188,8 +1188,9 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: start;
-      align-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1288,6 +1289,8 @@ template {
 }
 
 .footer__message {
+  width: 539px;
+  height: 123px;
   background-color: #fff;
   border-radius: 4px;
   padding: 18px 23px;
@@ -1316,7 +1319,24 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #BDBDBD;
+  color: #E0E0E0;
+}
+
+.footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer__list {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 @media (max-width: 1200px) {
@@ -1490,10 +1510,10 @@ template {
     right: 0;
     z-index: 99;
   }
-  .navbar__user--mobile_hidden, .navbar__search--mobile_hidden {
+  .navbar__user--mobile--hidden, .navbar__search--mobile--hidden {
     display: none;
   }
-  .navbar__user--mobile_visible, .navbar__search--mobile_visible {
+  .navbar__user--mobile--visible, .navbar__search--mobile--visible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1528,7 +1548,7 @@ template {
   .navbar-menu__item {
     margin-bottom: 20px;
   }
-  .navbar-menu__item--mobile_visible {
+  .navbar-menu__item--mobile--visible {
     display: block;
   }
   .menu-button {
@@ -1728,14 +1748,16 @@ template {
     grid-column: 1;
   }
   .footer__contact-details {
+    width: 310px;
     -ms-grid-row: 6;
     grid-row: 6;
     -ms-grid-column: 1;
     grid-column: 1;
   }
   .footer__contact-form {
-    -ms-grid-row: 7;
-    grid-row: 7;
+    width: 310px;
+    -ms-grid-row: 8;
+    grid-row: 8;
     -ms-grid-column: 1;
     grid-column: 1;
   }

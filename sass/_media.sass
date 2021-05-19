@@ -130,9 +130,9 @@
                 z-index: 99
         &__user, &__search
             &--mobile
-                &_hidden
+                &--hidden
                     display: none
-                &_visible
+                &--visible
                     display: flex
         &__user
             flex-direction: column
@@ -152,7 +152,7 @@
             &__item
                 margin-bottom: 20px
                 &--mobile
-                    &_visible
+                    &--visible
                         display: block
     .menu
         &-button
@@ -285,8 +285,10 @@
             grid-column: 1
         &__contact
             &-details
+                width: 310px
                 grid-row: 6
                 grid-column: 1
             &-form
-                grid-row: 7
+                width: 310px
+                grid-row: 8
                 grid-column: 1
