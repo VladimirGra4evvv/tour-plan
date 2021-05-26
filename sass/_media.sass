@@ -34,11 +34,14 @@
             &__link
                 &:hover
                     color: $primary
-    .booking
+    .booking, .footer
         &__button
             &:hover
                 color: $dark
-
+    .footer
+        &__link
+            &:hover
+                color: $primary
 @media (max-width: 992px)
     .container,
     .newsletter-wrapper
@@ -96,7 +99,7 @@
         &__social
             &-network
                 grid-row: 1 / 2
-                grid-column: span 4
+                grid-column: span 3
                 align-self: center
         &__categories
             grid-row: 2 / 3
@@ -107,11 +110,20 @@
             grid-column: span 2
         &__contact
             &-details
-                grid-column: span 5
+                grid-column: span 6
                 grid-row: 3
             &-form
-                grid-column: span 5
+                grid-column: span 6
                 grid-row: 4
+        &__info-bottom
+            grid-column: span 6
+        &__list-bottom
+            justify-content: left
+            padding: 0
+        &__item--mc
+            margin-left: 0
+            &:nth-child(n+2)
+                margin-left: 15px
 @media (max-width: 768px)
     .container
         max-width: 576px
@@ -176,6 +188,9 @@
                 color: $light
                 margin-left: 0
                 margin-top: 10px
+    .breadcrumb
+        &-list
+            padding-top: 25px
     .stars
         flex-basis: auto
     .hotel
@@ -244,10 +259,10 @@
     .navbar
         .logo
             width: 99px
-        .search
-            display: none
         &-top__menu-button
             margin-right: 20px
+        &__search--mobile--visible
+            width: 243px
     .stars
         margin-right: 30px
     .hotel
@@ -266,14 +281,18 @@
     .card
         width: 100%
     .reviews
+        padding-bottom: 50px
         &__title
             font-size: 18px
             margin-bottom: 42px
     .activities
         &__title
+            margin-top: 0
+            margin-bottom: 34px
             font-size: 18px
     .footer
         padding-top: 69px
+        padding-bottom: 10px
         &-wrapper
             grid-template-columns: 1fr
         &__logo
@@ -300,12 +319,26 @@
             grid-column: 1
         &__contact
             &-details
+                max-width: 280px
                 grid-row: 6
                 grid-column: 1
                 margin-bottom: 30px
             &-form
+                min-width: 280px
                 grid-row: 7
                 grid-column: 1
-                width: 90%
+                width: 100%
+        &__button
+            display: block
+            order: 1
+        &__info
+            flex-basis: 100%
+            margin-bottom: 20px
+        &__info-bottom
+            flex-wrap: wrap
+            padding: 0
+        &__list-bottom
+            justify-content: left
+            padding: 0
         &__form
-            width: 90%
+            width: 100%
