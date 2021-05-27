@@ -35,7 +35,7 @@
             &__link
                 &:hover
                     color: $primary
-    .booking, .footer
+    .booking, .footer, .modal
         &__button
             cursor: pointer
             &:hover
@@ -126,6 +126,15 @@
             margin-left: 0
             &:nth-child(n+2)
                 margin-left: 15px
+    .modal
+        &__dialog
+            &--visible
+                padding: 33px 55px
+        &__button
+            min-width: 120px
+            min-height: 30px
+        &__title
+            font-size: 16px
 @media (max-width: 768px)
     .container
         max-width: 576px
@@ -257,6 +266,18 @@
     .footer
         &__input
             flex-basis: 100%
+    .modal
+        &__dialog
+            &--visible
+                padding: 33px 50px
+                width: 75%
+        &__button
+            display: block
+            order: 1
+            width: 100%
+            min-height: 30px
+        &__info
+            margin-bottom: 15px
 @media (max-width: 576px)
     .navbar
         .logo
@@ -344,3 +365,8 @@
             padding: 0
         &__form
             width: 100%
+    .modal
+        &__dialog
+            &--visible
+                padding: 33px 20px
+                width: 93%
