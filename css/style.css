@@ -1044,7 +1044,7 @@ template {
 }
 
 .activities {
-  padding: 60px 0 98px 0;
+  padding: 0 0 98px 0;
 }
 
 .activities__title {
@@ -1373,6 +1373,11 @@ template {
 }
 
 @media (min-width: 992px) {
+  .search__button,
+  .subscribe__button,
+  .card__button {
+    cursor: pointer;
+  }
   .search__button:hover,
   .subscribe__button:hover,
   .card__button:hover {
@@ -1386,6 +1391,9 @@ template {
   }
   .breadcrumb-list__link:hover {
     color: #ec1f46;
+  }
+  .booking__button, .footer__button {
+    cursor: pointer;
   }
   .booking__button:hover, .footer__button:hover {
     color: #0a223d;
