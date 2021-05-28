@@ -537,7 +537,7 @@
                 <img src="img/close.svg" alt="icon: close">
             </a>
             <h3 class="modal__title">
-                Send us a message booking
+                Booking
             </h3>
             <form action="send.php" method="POST" class="form modal__form">
                 <input 
@@ -545,21 +545,24 @@
                     class="input modal__input" 
                     placeholder="Your Full Name*" 
                     name="name" 
+                    required
+                    minlenght="2"
                 >
                 <input 
                     type="text" 
                     class="input modal__input" 
                     placeholder="Phone Number*" 
                     name="phone"
+                    required
                 >
                 <input 
                     type="text" 
                     class="input modal__input" 
                     placeholder="Email*" 
                     name="email"
+                    required
                 >
                 <textarea 
-                    type="text"
                     class="message modal__message" 
                     placeholder="Message" 
                     name="message"
@@ -598,11 +601,10 @@
                 <input 
                     type="text" 
                     class="input modal__input" 
-                    placeholder="Email*" 
+                    placeholder="Your Email*" 
                     name="email"
                 >
                 <textarea 
-                    type="text"
                     class="message modal__message" 
                     placeholder="Message" 
                     name="message"
@@ -617,6 +619,7 @@
     <!-- /.rating-modal -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
