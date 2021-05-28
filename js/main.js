@@ -55,22 +55,30 @@ $(document).ready(function(){
   }
 
   //Обработка форм
-  $(".modal__form").validate({
-    messages: {
-      name: {
-        required: "Please specify your name",
-        minlenght: "Имя должно быть не короче 2 букв"
-      },
-      email: {
-        required: "We need your email address to contact you",
-        email: "Your email address must be in the format of name@domain.com"
-      },
-      phone: {
-        required: "Телефон обязателен",
-      },
-    }
+  $(".form").each(function(){
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Enter your name",
+          minlenght: "The name must be at least 2 letters long"
+        },
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: {
+          required: "Enter your phone number",
+        },
+      }
+    });
+  })
+ 
+  //Маска для номера телефона
+  $(document).ready(function(){
+    $('.phone').mask('+7(000)000-00-00');
   });
 
-
+  AOS.init();
 
 });

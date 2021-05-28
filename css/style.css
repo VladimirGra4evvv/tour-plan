@@ -48,6 +48,12 @@ img {
   background-color: #ec1f46;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.invalid {
+  color: #ec1f46;
+  border-bottom: 1px solid #ec1f46;
 }
 
 .form {
@@ -1304,6 +1310,10 @@ template {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1455,7 +1465,7 @@ template {
     width: 230px;
     height: 230px;
   }
-  .footer__input {
+  .footer__input__group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1559,9 +1569,9 @@ template {
         grid-template-columns: repeat(6, 1fr);
     grip-row-gap: 40px;
   }
-  .footer__input {
-    -ms-flex-preferred-size: 49%;
-        flex-basis: 49%;
+  .footer__input-group {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
   }
   .footer__logo {
     -ms-grid-row: 1;
@@ -1816,7 +1826,7 @@ template {
     width: 49%;
     height: 255px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }

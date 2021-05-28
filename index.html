@@ -13,6 +13,7 @@
         rel="stylesheet"
     >
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -124,7 +125,9 @@
             <div class="hotel-info">
                 <div class="hotel-info__text">
                     <div class="hotel-wrapper">
-                        <div class="stars">
+                        <div class="stars"
+                            data-aos="zoom-out-right"
+                            data-aos-delay="300">
                             <img src="img/star.svg" alt="star">
                             <img src="img/star.svg" alt="star">
                             <img src="img/star.svg" alt="star">
@@ -139,7 +142,9 @@
                     </p>
                 </div>
                 <!-- /.hotel-info__text -->
-                <div data-toggle="modal" data-href="#rating-modal" class="rating hotel-info__rating">
+                <div data-toggle="modal" data-href="#rating-modal" class="rating hotel-info__rating" 
+                    data-aos="zoom-out-left"
+                    data-aos-delay="500">
                     <span class="rating__text">User Rattings</span>
                     <span class="rating__counter">4.5/<strong class="rating__max-number">5</strong></span>
                 </div>
@@ -221,11 +226,15 @@
     <!-- /.hotel -->
     <section class="newsletter">
         <div class="newsletter-wrapper">
-            <h2 class="newsletter-title newsletter__title">
+            <h2 class="newsletter-title newsletter__title"
+                data-aos="zoom-out"
+                data-aos-delay="300">
                 subscribe to our
                 <span class="newsletter-title__strong">Newsletter</span>
             </h2>
-            <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
+            <form action="send.php" method="POST" class="subscribe newsletter__subscribe"
+                data-aos="zoom-out"
+                data-aos-delay="500">
                 <input type="text" class="subscribe__input" placeholder="Your email address" name="email">
                 <button class="subscribe__button">Send</button>
             </form>
@@ -235,7 +244,7 @@
     <!-- /.newsletter -->
     <section class="reviews">
         <div class="container">
-            <h2 class="reviews__title">
+            <h2 class="reviews__title" data-aos="zoom-out" data-aos-delay="300">
                 What people think about us
             </h2>
             <div class="swiper-container">
@@ -375,7 +384,7 @@
         <div class="container">
             <h2 class="activities__title">Other Activities</h2>
             <div class="activities-wrapper">
-            <div class="card activities__card">
+            <div class="card activities__card" data-aos="fade-right" data-aos-delay="100">
                 <img src="img/activiti-1.jpg" alt="The curious corner 
                 of chamarel" class="card__image">
                 <h3 class="card__title">The curious corner 
@@ -383,7 +392,7 @@
                 <button class="card__button">Book Now</button>
             </div>
             <!-- /.card -->
-            <div class="card activities__card">
+            <div class="card activities__card" data-aos="fade-right" data-aos-delay="200">
                 <img src="img/activiti-2.jpg" alt="Gymkhana club golf
                 course" class="card__image">
                 <h3 class="card__title">Gymkhana club golf
@@ -391,7 +400,7 @@
                 <button class="card__button">Book Now</button>
             </div>
             <!-- /.card -->
-            <div class="card activities__card">
+            <div class="card activities__card" data-aos="fade-right" data-aos-delay="300">
                 <img src="img/activiti-3.jpg" alt="Tamarind falls hiking
                 trip - full day" class="card__image">
                 <h3 class="card__title">Tamarind falls hiking
@@ -399,7 +408,7 @@
                 <button class="card__button">Book Now</button>
             </div>
             <!-- /.card -->
-            <div class="card activities__card">
+            <div class="card activities__card" data-aos="fade-right" data-aos-delay="400">
                 <img src="img/activiti-4.jpg" alt="The blue marine discovery
                 quest" class="card__image">
                 <h3 class="card__title">The blue marine discovery
@@ -502,9 +511,32 @@
                         Send us a message
                     </h3>
                     <form action="send.php" method="POST" class="form footer__form">
-                        <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" >
-                        <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
-                        <textarea type="text" class="message footer__message" placeholder="Message" name="message"></textarea>
+                        <div class="footer__input-group">
+                            <input 
+                                type="text" 
+                                class="input footer__input" 
+                                placeholder="Your Full Name*" 
+                                name="name"
+                                required
+                            >
+                        </div>
+                        <div class="footer__input-group">
+                            <input 
+                                type="text" 
+                                class="input footer__input" 
+                                placeholder="Phone Number*" 
+                                name="phone"
+                                required
+                                data-mask="+7 (999) 999-99-99" 
+                                data-mask="true"
+                            >
+                        </div>
+                        <textarea 
+                            type="text" 
+                            class="message footer__message" 
+                            placeholder="Message" 
+                            name="message">
+                        </textarea>
                         <button class="button footer__button" type="submit">Send</button>
                         <span class="footer__info">* Required Fields</span>
                     </form>
@@ -545,8 +577,8 @@
                     class="input modal__input" 
                     placeholder="Your Full Name*" 
                     name="name" 
+                    minlenght="4"
                     required
-                    minlenght="2"
                 >
                 <input 
                     type="text" 
@@ -554,6 +586,8 @@
                     placeholder="Phone Number*" 
                     name="phone"
                     required
+                    data-mask="+7 (999) 999-99-99" 
+                    data-mask="true"
                 >
                 <input 
                     type="text" 
@@ -591,18 +625,24 @@
                     class="input modal__input" 
                     placeholder="Your Full Name*" 
                     name="name" 
+                    required
+                    minlength="2"
                 >
                 <input 
                     type="text" 
                     class="input modal__input" 
                     placeholder="Phone Number*" 
                     name="phone"
+                    required
+                    data-mask="+7 (999) 999-99-99" 
+                    data-mask="true"
                 >
                 <input 
                     type="text" 
                     class="input modal__input" 
                     placeholder="Your Email*" 
                     name="email"
+                    required
                 >
                 <textarea 
                     class="message modal__message" 
@@ -620,6 +660,8 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

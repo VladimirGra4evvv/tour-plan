@@ -13,7 +13,8 @@
         height: 230px
     .footer
         &__input
-            flex-basis: 100%
+            &__group
+                flex-basis: 100%
 @media (min-width: 992px)
     .search,
     .subscribe,
@@ -94,7 +95,8 @@
             grid-template-columns: repeat(6, 1fr)
             grip-row-gap: 40px
         &__input
-            flex-basis: 49%
+            &-group
+                flex-basis: 48%
         &__logo
             grid-row: 1 / 2
             grid-column: span 2
@@ -265,7 +267,8 @@
         height: 255px
     .footer
         &__input
-            flex-basis: 100%
+            &-group
+                flex-basis: 100%
     .modal
         &__dialog
             &--visible
